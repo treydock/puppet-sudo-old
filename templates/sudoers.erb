@@ -88,13 +88,7 @@ Defaults    env_keep += "LC_TIME LC_ALL LANGUAGE LINGUAS _XKB_CHARSET XAUTHORITY
 ##
 ## Allow root to run any commands anywhere 
 root	ALL=(ALL) 	ALL
-<% if has_variable?("backuppc_sudocmd") then %>
-<%= backuppc_sudocmd %>
-<% end %>
 
-<% if has_variable?("sudo_extras") then %>
-<%= sudo_extras %>
-<% end %>
 ## Allows members of the 'sys' group to run networking, software, 
 ## service management apps and more.
 # %sys ALL = NETWORKING, SOFTWARE, SERVICES, STORAGE, DELEGATING, PROCESSES, LOCATE, DRIVERS
