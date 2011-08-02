@@ -1,0 +1,7 @@
+= Usage =
+
+This module can be called by using
+
+include sudo
+
+
