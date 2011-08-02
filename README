@@ -4,4 +4,19 @@ This module can be called by using
 
 include sudo
 
+== Definition usage ==
 
+The sudo directives can be added in two ways, either by referencing the contents or file source
+
+
+NOTE: The new line is necessary to avoid errors as puppet does not add it automatically
+    sudo::directive { "zabbix-puppet":
+        ensure  => present,
+        content => "zabbix ALL=NOPASSWD: /var/lib/zabbix/bin/start_puppet\n",
+    }   
+
+
+    sudo::directive { "zabbix-puppet":
+        ensure  => present,
+        source  => "puppet:///files/zabbix_sudocmd",
+    }   
